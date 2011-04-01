@@ -23,6 +23,8 @@
 		0EE09AB71345E76D0008386E /* Tower.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB61345E76D0008386E /* Tower.rb */; };
 		0EE09AB91345E77F0008386E /* GameView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB81345E77F0008386E /* GameView.rb */; };
 		0EE09ACB1345F3E10008386E /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09ACA1345F3E10008386E /* Player.rb */; };
+		0EE09AE1134625E50008386E /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AE0134625E40008386E /* README.markdown */; };
+		0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		0EE09AB61345E76D0008386E /* Tower.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Tower.rb; sourceTree = "<group>"; };
 		0EE09AB81345E77F0008386E /* GameView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameView.rb; sourceTree = "<group>"; };
 		0EE09ACA1345F3E10008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
+		0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindow.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 				0EE09A791345BC110008386E /* AppDelegate.rb */,
 				0EE09A871345BED70008386E /* Sirtet.rb */,
 				0EE09AAE1345E75C0008386E /* GameHelper.rb */,
+				0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */,
 				0EE09AB81345E77F0008386E /* GameView.rb */,
 				0EE09AAF1345E75C0008386E /* NextBlockView.rb */,
 				0EE09AA01345C8400008386E /* ScoresView.rb */,
@@ -213,6 +217,7 @@
 				0EE09AB71345E76D0008386E /* Tower.rb in Resources */,
 				0EE09AB91345E77F0008386E /* GameView.rb in Resources */,
 				0EE09ACB1345F3E10008386E /* Player.rb in Resources */,
+				0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
