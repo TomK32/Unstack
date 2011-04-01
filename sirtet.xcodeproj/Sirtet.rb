@@ -20,8 +20,8 @@ class Sirtet
   end
   
   def start_game(sender)
-    self.height = 20
-    self.width = 10
+    self.height = (game_view.tower_view.frame.size.height / 20).floor
+    self.width = (game_view.tower_view.frame.size.width / 20).floor
     self.grade = rand
     self.blocks = []
     self.player ||= Player.new
