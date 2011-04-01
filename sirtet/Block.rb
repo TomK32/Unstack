@@ -74,4 +74,9 @@ class Block
     self.shape = new_shape.reject{|row| row.compact.empty? }
     return true
   end
+
+  def rotate!(angle)
+    self.shape = self.shape.transpose if angle % 90
+    self.shape = self.shape.collect{|row| row.reverse} if angle % 180
+  end
 end

@@ -36,7 +36,10 @@ class Sirtet
   end
 
   def tick(seconds)
-    self.next_block = Block.new unless self.next_block.tick(1/20.0)
+    unless self.next_block.tick(1/20.0)
+      self.player.score -= (self.next_block.initial_time/2)
+      self.next_block = Block.new
+    end
     game_view.setNeedsDisplay true
   end
 
