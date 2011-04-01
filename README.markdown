@@ -7,6 +7,8 @@ You start with a field full with block and your goal to remove the
 blocks from the field matching your next piece to remove. Confused? Great :)
 
 
+![Game in Action](https://github.com/TomK32/Sirtet/raw/master/screenshot.png)
+
 Requirements & Website
 ----------------------
 
