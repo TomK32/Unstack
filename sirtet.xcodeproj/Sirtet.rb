@@ -58,6 +58,8 @@ class Sirtet
       player.score += next_block.time_remaining
       self.next_block = Block.new
       game_view.scores_view.setNeedsDisplay true
+      return true
     end
+    return false
   end
 end

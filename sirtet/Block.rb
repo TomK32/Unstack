@@ -61,17 +61,17 @@ class Block
   end
 
   def remove(other_block, other_x, other_y)
-    new_shape = shape.dup
+    new_shape = shape.clone
     other_block.shape.each_with_index do |row, y|
       row.each_with_index do |field, x|
         if !field.nil?
-          return false if shape[other_y+y][other_x+x].nil?
-          shape[other_y+y][other_x+x] = nil
+          return false if new_shape[other_y+y][other_x+x].nil?
+          new_shape[other_y+y][other_x+x] = nil
         end
       end
     end
     # remove empty rows
-    self.shape = new_shape.reject!{|row| row.compact.empty? }
+    self.shape = new_shape.reject{|row| row.compact.empty? }
     return true
   end
 end

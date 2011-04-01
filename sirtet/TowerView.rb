@@ -21,12 +21,12 @@ class TowerView < NSView
     with_context do
       game.tower.drawRect(rect, block_size)
     end
-    draw_block if self.block_position
+    draw_block if self.block_fits? && self.block_position
   end
 
   def mouseDown(event)
     point = self.point_in_grid(convertPoint event.locationInWindow, fromView:nil)
-    self.block_position = point if game.next_block_fits?(point.x/block_size, point.y/block_size)
+    self.block_position = point
   end
 
   def point_in_grid(point)
@@ -56,5 +56,10 @@ class TowerView < NSView
       game.next_block.drawRect(frame, block_size)
     end
     setNeedsDisplay true
+  end
+
+  def block_fits?
+    return false unless self.block_position
+    game.next_block_fits?(self.block_position.x/block_size, block_position.y/block_size)
   end
 end
