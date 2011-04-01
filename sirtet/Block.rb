@@ -70,6 +70,8 @@ class Block
         end
       end
     end
-    self.shape = new_shape
+    # remove empty rows
+    self.shape = new_shape.reject!{|row| row.compact.empty? }
+    return true
   end
 end

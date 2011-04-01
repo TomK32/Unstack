@@ -60,7 +60,4 @@ class Sirtet
       game_view.scores_view.setNeedsDisplay true
     end
   end
-
-  def remove_block
-  end
 end
