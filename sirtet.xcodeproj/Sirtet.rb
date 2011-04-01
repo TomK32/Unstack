@@ -28,7 +28,7 @@ class Sirtet
     self.width = (game_view.tower_view.frame.size.width / 20).floor
     self.grade = rand/4 + 0.7
     self.blocks = []
-    self.player ||= Player.new
+    self.player ||= Player.new("Thomas")
     self.player.score = 0
     self.tower = Tower.random(self.grade, self.height, self.width)
     self.next_block = Block.new
@@ -57,8 +57,10 @@ class Sirtet
   end
 
   def score!(x,y)
+    size_before = tower.size
     if tower.remove(next_block, x, y)
-      player.score += next_block.time_remaining
+
+      player.add_score(next_block.time_remaining ** (1 + size_before.width - tower.size.width + size_before.height - tower.size.height))
       self.next_block = Block.new
       game_view.scores_view.setNeedsDisplay true
       return true
