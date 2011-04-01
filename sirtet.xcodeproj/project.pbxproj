@@ -25,7 +25,18 @@
 		0EE09ACB1345F3E10008386E /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09ACA1345F3E10008386E /* Player.rb */; };
 		0EE09AE1134625E50008386E /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AE0134625E40008386E /* README.markdown */; };
 		0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */; };
+		0EE962E913463F0A003ADC6B /* Sirtet.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0EE962E813463F0A003ADC6B /* Sirtet.icns */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EE962E613463C4F003ADC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EE09A571345BC110008386E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EE09A5F1345BC110008386E;
+			remoteInfo = sirtet;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0EE09A601345BC110008386E /* sirtet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sirtet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +60,7 @@
 		0EE09ACA1345F3E10008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
 		0EE09AE0134625E40008386E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindow.rb; sourceTree = "<group>"; };
+		0EE962E813463F0A003ADC6B /* Sirtet.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Sirtet.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 		0EE09A551345BC110008386E = {
 			isa = PBXGroup;
 			children = (
+				0EE962E813463F0A003ADC6B /* Sirtet.icns */,
 				0EE09AE0134625E40008386E /* README.markdown */,
 				0EE09A691345BC110008386E /* sirtet */,
 				0EE09A631345BC110008386E /* Frameworks */,
@@ -150,6 +163,7 @@
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
 			dependencies = (
+				0EE962E713463C4F003ADC6B /* PBXTargetDependency */,
 			);
 			name = Deployment;
 			passBuildSettingsInEnvironment = 1;
@@ -221,6 +235,7 @@
 				0EE09ACB1345F3E10008386E /* Player.rb in Resources */,
 				0EE09AE1134625E50008386E /* README.markdown in Resources */,
 				0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */,
+				0EE962E913463F0A003ADC6B /* Sirtet.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +251,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EE962E713463C4F003ADC6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EE09A5F1345BC110008386E /* sirtet */;
+			targetProxy = 0EE962E613463C4F003ADC6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0EE09A6C1345BC110008386E /* InfoPlist.strings */ = {
