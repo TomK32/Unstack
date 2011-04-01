@@ -48,6 +48,10 @@ class Sirtet
     game_view.next_block_view.block = block
   end
 
+  def next_block_fits?(x,y)
+    tower.fits?(next_block, x, y)
+  end
+
   def remove_block
   end
 end

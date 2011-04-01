@@ -8,7 +8,7 @@
 
 
 module GameHelper
-  def withContext(&block)
+  def with_context(&block)
     context = NSGraphicsContext.currentContext
     context.saveGraphicsState
     yield

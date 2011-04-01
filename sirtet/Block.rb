@@ -11,11 +11,12 @@ class Block
   attr_accessor :shape
   attr_accessor :time_remaining
   attr_accessor :initial_time
+  attr_accessor :position
 
   SHAPES = [
-    [[nil,1,nil], [1,1,1]], # T
-    [[1,nil], [1,nil], [1,1]], # L
-    [[nil,1], [nil,1], [1,1]], # inverse L
+    [[1,1,1], [nil,1,nil]], # T
+    [[1,1,1], [1,nil,nil]], # L
+    [[1,1,1], [nil,nil,1]], # inverse L
     [[1,1,nil], [nil,1,1]], # z
     [[nil,1,1], [1,1,nil]], # inverse z
     [[1,1,1,1]], # long john
@@ -48,5 +49,14 @@ class Block
   end
   def size
     @size ||= NSSize.new(shape.collect{|r| r.size}.max, shape.size)
+  end
+
+  def fits?(other_block, other_x, other_y)
+    other_block.shape.each_with_index do |row, y|
+      row.each_with_index do |field, x|
+        return false if !field.nil? && [field.nil?, shape[other_y+y][other_x+x].nil?].uniq.size > 1
+      end
+    end
+    return true
   end
 end

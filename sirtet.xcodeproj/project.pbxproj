@@ -17,13 +17,12 @@
 		0EE09A841345BCD90008386E /* Block.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A831345BCD90008386E /* Block.rb */; };
 		0EE09A881345BED70008386E /* Sirtet.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A871345BED70008386E /* Sirtet.rb */; };
 		0EE09AA11345C8400008386E /* ScoresView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AA01345C8400008386E /* ScoresView.rb */; };
-		0EE09AA51345C9240008386E /* GameHelper.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AA41345C9240008386E /* GameHelper.rb */; };
 		0EE09AB21345E75D0008386E /* GameHelper.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AAE1345E75C0008386E /* GameHelper.rb */; };
 		0EE09AB31345E75D0008386E /* NextBlockView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AAF1345E75C0008386E /* NextBlockView.rb */; };
-		0EE09AB41345E75D0008386E /* ScoresView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB01345E75C0008386E /* ScoresView.rb */; };
 		0EE09AB51345E75D0008386E /* TowerView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB11345E75D0008386E /* TowerView.rb */; };
 		0EE09AB71345E76D0008386E /* Tower.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB61345E76D0008386E /* Tower.rb */; };
 		0EE09AB91345E77F0008386E /* GameView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB81345E77F0008386E /* GameView.rb */; };
+		0EE09ACB1345F3E10008386E /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09ACA1345F3E10008386E /* Player.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +39,12 @@
 		0EE09A831345BCD90008386E /* Block.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Block.rb; sourceTree = "<group>"; };
 		0EE09A871345BED70008386E /* Sirtet.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Sirtet.rb; path = sirtet.xcodeproj/Sirtet.rb; sourceTree = SOURCE_ROOT; };
 		0EE09AA01345C8400008386E /* ScoresView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ScoresView.rb; sourceTree = "<group>"; };
-		0EE09AA41345C9240008386E /* GameHelper.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameHelper.rb; sourceTree = "<group>"; };
 		0EE09AAE1345E75C0008386E /* GameHelper.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameHelper.rb; sourceTree = "<group>"; };
 		0EE09AAF1345E75C0008386E /* NextBlockView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NextBlockView.rb; sourceTree = "<group>"; };
-		0EE09AB01345E75C0008386E /* ScoresView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ScoresView.rb; sourceTree = "<group>"; };
 		0EE09AB11345E75D0008386E /* TowerView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TowerView.rb; sourceTree = "<group>"; };
 		0EE09AB61345E76D0008386E /* Tower.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Tower.rb; sourceTree = "<group>"; };
 		0EE09AB81345E77F0008386E /* GameView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameView.rb; sourceTree = "<group>"; };
+		0EE09ACA1345F3E10008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,16 +90,15 @@
 			isa = PBXGroup;
 			children = (
 				0EE09A791345BC110008386E /* AppDelegate.rb */,
-				0EE09AA01345C8400008386E /* ScoresView.rb */,
-				0EE09A831345BCD90008386E /* Block.rb */,
-				0EE09AA41345C9240008386E /* GameHelper.rb */,
 				0EE09A871345BED70008386E /* Sirtet.rb */,
 				0EE09AAE1345E75C0008386E /* GameHelper.rb */,
 				0EE09AB81345E77F0008386E /* GameView.rb */,
 				0EE09AAF1345E75C0008386E /* NextBlockView.rb */,
-				0EE09AB01345E75C0008386E /* ScoresView.rb */,
-				0EE09AB61345E76D0008386E /* Tower.rb */,
+				0EE09AA01345C8400008386E /* ScoresView.rb */,
 				0EE09AB11345E75D0008386E /* TowerView.rb */,
+				0EE09A831345BCD90008386E /* Block.rb */,
+				0EE09ACA1345F3E10008386E /* Player.rb */,
+				0EE09AB61345E76D0008386E /* Tower.rb */,
 				0EE09A721345BC110008386E /* Resources */,
 				0EE09A761345BC110008386E /* Other Sources */,
 				0EE09A6A1345BC110008386E /* Supporting Files */,
@@ -210,13 +207,12 @@
 				0EE09A841345BCD90008386E /* Block.rb in Resources */,
 				0EE09A881345BED70008386E /* Sirtet.rb in Resources */,
 				0EE09AA11345C8400008386E /* ScoresView.rb in Resources */,
-				0EE09AA51345C9240008386E /* GameHelper.rb in Resources */,
 				0EE09AB21345E75D0008386E /* GameHelper.rb in Resources */,
 				0EE09AB31345E75D0008386E /* NextBlockView.rb in Resources */,
-				0EE09AB41345E75D0008386E /* ScoresView.rb in Resources */,
 				0EE09AB51345E75D0008386E /* TowerView.rb in Resources */,
 				0EE09AB71345E76D0008386E /* Tower.rb in Resources */,
 				0EE09AB91345E77F0008386E /* GameView.rb in Resources */,
+				0EE09ACB1345F3E10008386E /* Player.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

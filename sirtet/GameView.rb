@@ -8,6 +8,7 @@
 
 
 class GameView < NSView
+  include GameHelper
   attr_accessor :game
   attr_accessor :next_block_view
   attr_accessor :scores_view
@@ -20,9 +21,5 @@ class GameView < NSView
   def drawRect(rect)
     NSColor.blackColor.set
     NSRectFill(bounds)
-  end
-  
-  def mouseDown(event)
-    
   end
 end
