@@ -13,5 +13,6 @@ class ScoresView < NSView
   attr_accessor :player
   def drawRect rect
     NSColor.whiteColor.set
+    score.setTitle "%.2f" % game.player.score
   end
 end

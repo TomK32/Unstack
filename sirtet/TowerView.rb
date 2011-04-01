@@ -34,7 +34,17 @@ class TowerView < NSView
   end
 
   def mouseUp(event)
+    point = convertPoint event.locationInWindow, fromView:nil
+    self.block_position && game.score!(point.x/block_size, point.y/block_size)
     self.block_position = nil
+    self.setNeedsDisplay true
+  end
+
+  def mouseDragged(event)
+    point = convertPoint event.locationInWindow, fromView:nil
+#    if (self.block_position.x - point.x) > block_size/2
+      #game.next_block.flip(:x)
+#    end
   end
 
   def draw_block
@@ -42,7 +52,7 @@ class TowerView < NSView
       transform = NSAffineTransform.transform
       transform.translateXBy self.block_position.x, yBy: self.block_position.y
       transform.concat
-      NSColor.whiteColor.colorWithAlphaComponent(0.2).set
+      NSColor.yellowColor.colorWithAlphaComponent(0.7).set
       game.next_block.drawRect(frame, block_size)
     end
     setNeedsDisplay true

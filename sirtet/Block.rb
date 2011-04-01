@@ -59,4 +59,17 @@ class Block
     end
     return true
   end
+
+  def remove(other_block, other_x, other_y)
+    new_shape = shape.dup
+    other_block.shape.each_with_index do |row, y|
+      row.each_with_index do |field, x|
+        if !field.nil?
+          return false if shape[other_y+y][other_x+x].nil?
+          shape[other_y+y][other_x+x] = nil
+        end
+      end
+    end
+    self.shape = new_shape
+  end
 end

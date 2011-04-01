@@ -46,10 +46,19 @@ class Sirtet
 
   def next_block=(block)
     game_view.next_block_view.block = block
+    game_view.next_block_view.setNeedsDisplay true
   end
 
   def next_block_fits?(x,y)
     tower.fits?(next_block, x, y)
+  end
+
+  def score!(x,y)
+    if tower.remove(next_block, x, y)
+      player.score += next_block.time_remaining
+      self.next_block = Block.new
+      game_view.scores_view.setNeedsDisplay true
+    end
   end
 
   def remove_block
