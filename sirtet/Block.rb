@@ -54,7 +54,7 @@ class Block
   def fits?(other_block, other_x, other_y)
     other_block.shape.each_with_index do |row, y|
       row.each_with_index do |field, x|
-        return false if !field.nil? && [field.nil?, shape[other_y+y][other_x+x].nil?].uniq.size > 1
+        return false if !field.nil? && shape[other_y+y][other_x+x].nil?
       end
     end
     return true
