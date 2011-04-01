@@ -46,4 +46,7 @@ class Block
       end
     end
   end
+  def size
+    @size ||= NSSize.new(shape.collect{|r| r.size}.max, shape.size)
+  end
 end
