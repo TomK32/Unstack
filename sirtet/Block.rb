@@ -54,7 +54,7 @@ class Block
   def fits?(other_block, other_x, other_y)
     other_block.shape.each_with_index do |row, y|
       row.each_with_index do |field, x|
-        return false if !field.nil? && shape[other_y+y][other_x+x].nil?
+        return false if !field.nil? && (shape[other_y+y].nil? || shape[other_y+y][other_x+x].nil?)
       end
     end
     return true
@@ -65,7 +65,7 @@ class Block
     other_block.shape.each_with_index do |row, y|
       row.each_with_index do |field, x|
         if !field.nil?
-          return false if new_shape[other_y+y][other_x+x].nil?
+          return false if new_shape[other_y+y].nil? || new_shape[other_y+y][other_x+x].nil?
           new_shape[other_y+y][other_x+x] = nil
         end
       end
