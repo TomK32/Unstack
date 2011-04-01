@@ -16,7 +16,8 @@ class ScoresView < NSView
   def drawRect rect
     NSColor.whiteColor.set
     player.setTitle game.player.name.to_s
-    last_score.setTitle "+%.2f" % game.player.scores[-1][1] if game.player.scores[-1]
+    l = game.player.scores[-1]
+    last_score.setTitle "%s%.2f" % [l[1] > 0 ? '+' : nil, l[1]] if l
     score.setTitle "%.2f" % game.player.score
   end
 end
