@@ -7,7 +7,7 @@
 #
 
 
-def Block
+class Block
   attr_accessor :position
   attr_accessor :shape
   attr_accessor :field

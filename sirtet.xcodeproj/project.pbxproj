@@ -18,6 +18,7 @@
 		0EE09A881345BED70008386E /* Sirtet.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A871345BED70008386E /* Sirtet.rb */; };
 		0EE09A921345BF490008386E /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A911345BF490008386E /* Player.rb */; };
 		0EE09A941345BF960008386E /* GameView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A931345BF960008386E /* GameView.rb */; };
+		0EE09A9E1345C1730008386E /* Tower.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A9D1345C1730008386E /* Tower.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +33,10 @@
 		0EE09A771345BC110008386E /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		0EE09A791345BC110008386E /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		0EE09A831345BCD90008386E /* Block.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Block.rb; sourceTree = "<group>"; };
-		0EE09A871345BED70008386E /* Sirtet.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Sirtet.rb; path = sirtet.xcodeproj/Sirtet.rb; sourceTree = "<group>"; };
-		0EE09A911345BF490008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
-		0EE09A931345BF960008386E /* GameView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameView.rb; sourceTree = "<group>"; };
+		0EE09A871345BED70008386E /* Sirtet.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Sirtet.rb; path = sirtet.xcodeproj/Sirtet.rb; sourceTree = SOURCE_ROOT; };
+		0EE09A911345BF490008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Player.rb; path = ../Player.rb; sourceTree = "<group>"; };
+		0EE09A931345BF960008386E /* GameView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = GameView.rb; path = ../GameView.rb; sourceTree = "<group>"; };
+		0EE09A9D1345C1730008386E /* Tower.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Tower.rb; path = ../Tower.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +55,6 @@
 		0EE09A551345BC110008386E = {
 			isa = PBXGroup;
 			children = (
-				0EE09A871345BED70008386E /* Sirtet.rb */,
-				0EE09A931345BF960008386E /* GameView.rb */,
-				0EE09A911345BF490008386E /* Player.rb */,
 				0EE09A691345BC110008386E /* sirtet */,
 				0EE09A631345BC110008386E /* Frameworks */,
 				0EE09A611345BC110008386E /* Products */,
@@ -83,10 +82,14 @@
 			isa = PBXGroup;
 			children = (
 				0EE09A791345BC110008386E /* AppDelegate.rb */,
+				0EE09A831345BCD90008386E /* Block.rb */,
+				0EE09A931345BF960008386E /* GameView.rb */,
+				0EE09A911345BF490008386E /* Player.rb */,
+				0EE09A871345BED70008386E /* Sirtet.rb */,
+				0EE09A9D1345C1730008386E /* Tower.rb */,
 				0EE09A721345BC110008386E /* Resources */,
 				0EE09A761345BC110008386E /* Other Sources */,
 				0EE09A6A1345BC110008386E /* Supporting Files */,
-				0EE09A831345BCD90008386E /* Block.rb */,
 			);
 			path = sirtet;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				0EE09A881345BED70008386E /* Sirtet.rb in Resources */,
 				0EE09A921345BF490008386E /* Player.rb in Resources */,
 				0EE09A941345BF960008386E /* GameView.rb in Resources */,
+				0EE09A9E1345C1730008386E /* Tower.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +236,7 @@
 		0EE09A7B1345BC110008386E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -244,13 +248,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		0EE09A7C1345BC110008386E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -258,6 +263,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -324,6 +330,7 @@
 				0EE09A7F1345BC110008386E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EE09A801345BC110008386E /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -332,6 +339,7 @@
 				0EE09A821345BC110008386E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
