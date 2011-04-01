@@ -47,6 +47,7 @@
 		0EE09AB61345E76D0008386E /* Tower.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Tower.rb; sourceTree = "<group>"; };
 		0EE09AB81345E77F0008386E /* GameView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameView.rb; sourceTree = "<group>"; };
 		0EE09ACA1345F3E10008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
+		0EE09AE0134625E40008386E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindow.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +67,7 @@
 		0EE09A551345BC110008386E = {
 			isa = PBXGroup;
 			children = (
+				0EE09AE0134625E40008386E /* README.markdown */,
 				0EE09A691345BC110008386E /* sirtet */,
 				0EE09A631345BC110008386E /* Frameworks */,
 				0EE09A611345BC110008386E /* Products */,
@@ -217,6 +219,7 @@
 				0EE09AB71345E76D0008386E /* Tower.rb in Resources */,
 				0EE09AB91345E77F0008386E /* GameView.rb in Resources */,
 				0EE09ACB1345F3E10008386E /* Player.rb in Resources */,
+				0EE09AE1134625E50008386E /* README.markdown in Resources */,
 				0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
