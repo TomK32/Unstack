@@ -18,5 +18,11 @@ class GameView < NSView
   end
 
   def drawRect(rect)
+    NSColor.blackColor.set
+    NSRectFill(bounds)
+  end
+  
+  def mouseDown(event)
+    
   end
 end
