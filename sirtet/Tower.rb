@@ -54,6 +54,7 @@ class Tower < Block
     # and again if it's really sparse
     @fill_grade = nil
     @size = nil
-    self.shuffle_and_remove(run+1) and return true if (self.fill_grade*run < (self.grade**2))
+    self.shuffle_and_remove(run+1) if (self.fill_grade*run < (self.grade**2))
+    return true
   end
 end

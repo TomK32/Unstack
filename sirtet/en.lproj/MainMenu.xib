@@ -208,7 +208,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="299047865">
+								<object class="NSMenuItem" id="374701600">
 									<reference key="NSMenu" ref="720053764"/>
 									<string key="NSTitle">Shuffle and Compact</string>
 									<string key="NSKeyEquiv">s</string>
@@ -275,7 +275,7 @@
 						<object class="NSCustomView" id="315558709">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">306</int>
-							<string key="NSFrame">{{0, 4}, {320, 340}}</string>
+							<string key="NSFrameSize">{320, 340}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="676869012"/>
@@ -287,15 +287,15 @@
 							<int key="NSvFlags">270</int>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSTextField" id="48826335">
+								<object class="NSTextField" id="73868772">
 									<reference key="NSNextResponder" ref="712270160"/>
 									<int key="NSvFlags">268</int>
-									<string key="NSFrame">{{7, 8}, {135, 14}}</string>
+									<string key="NSFrame">{{7, 6}, {135, 14}}</string>
 									<reference key="NSSuperview" ref="712270160"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="315558709"/>
 									<bool key="NSEnabled">YES</bool>
-									<object class="NSTextFieldCell" key="NSCell" id="517918929">
+									<object class="NSTextFieldCell" key="NSCell" id="1056388618">
 										<int key="NSCellFlags">68288064</int>
 										<int key="NSCellFlags2">272630784</int>
 										<string key="NSContents">Stats</string>
@@ -305,7 +305,7 @@
 											<int key="NSfFlags">16</int>
 										</object>
 										<string key="NSPlaceholderString"/>
-										<reference key="NSControlView" ref="48826335"/>
+										<reference key="NSControlView" ref="73868772"/>
 										<object class="NSColor" key="NSBackgroundColor" id="140558680">
 											<int key="NSColorSpace">6</int>
 											<string key="NSCatalogName">System</string>
@@ -332,7 +332,7 @@
 									<string key="NSFrame">{{171, 36}, {75, 22}}</string>
 									<reference key="NSSuperview" ref="712270160"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="48826335"/>
+									<reference key="NSNextKeyView" ref="73868772"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="978153814">
 										<int key="NSCellFlags">68288064</int>
@@ -736,7 +736,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">shuffle_and_remove:</string>
 						<reference key="source" ref="771025895"/>
-						<reference key="destination" ref="299047865"/>
+						<reference key="destination" ref="374701600"/>
 					</object>
 					<int key="connectionID">608</int>
 				</object>
@@ -744,7 +744,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">stats</string>
 						<reference key="source" ref="712270160"/>
-						<reference key="destination" ref="517918929"/>
+						<reference key="destination" ref="1056388618"/>
 					</object>
 					<int key="connectionID">611</int>
 				</object>
@@ -820,7 +820,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="705341025"/>
-							<reference ref="299047865"/>
+							<reference ref="374701600"/>
 						</object>
 						<reference key="parent" ref="379814623"/>
 					</object>
@@ -974,7 +974,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="633589328"/>
 							<reference ref="519277126"/>
-							<reference ref="48826335"/>
+							<reference ref="73868772"/>
 							<reference ref="1034102166"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
@@ -1101,23 +1101,23 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">607</int>
-						<reference key="object" ref="299047865"/>
+						<reference key="object" ref="374701600"/>
 						<reference key="parent" ref="720053764"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">609</int>
-						<reference key="object" ref="48826335"/>
+						<reference key="object" ref="73868772"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="517918929"/>
+							<reference ref="1056388618"/>
 						</object>
 						<reference key="parent" ref="712270160"/>
 						<string key="objectName">Stats</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">610</int>
-						<reference key="object" ref="517918929"/>
-						<reference key="parent" ref="48826335"/>
+						<reference key="object" ref="1056388618"/>
+						<reference key="parent" ref="73868772"/>
 					</object>
 				</object>
 			</object>
@@ -1305,7 +1305,7 @@
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
-							<reference key="object" ref="299047865"/>
+							<reference key="object" ref="374701600"/>
 							<string key="toolTip">Shuffles the field and removes a line.</string>
 						</object>
 					</object>

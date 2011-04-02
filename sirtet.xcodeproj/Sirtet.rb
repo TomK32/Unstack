@@ -41,6 +41,7 @@ class Sirtet
       self.next_block = Block.new
     end
     game_view.setNeedsDisplay true
+    game_view.scores_view.setNeedsDisplay true
   end
 
   def next_block
@@ -67,7 +68,8 @@ class Sirtet
 
   def shuffle_and_remove(sender)
     if tower.shuffle_and_remove
-      player.add_score(-2)
+      player.add_score(-20)
+      game_view.scores_view.setNeedsDisplay true
     end
     self.next_block = Block.new
   end

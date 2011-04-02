@@ -78,8 +78,8 @@ class Block
   end
 
   def rotate!(angle)
-    self.shape = self.shape.transpose if angle % 90
-    self.shape = self.shape.collect{|row| row.reverse} if angle % 180
+    self.shape = self.shape.transpose if angle % 180
+    self.shape = self.shape.collect{|row| row.reverse} if angle % 90
   end
 
   # uses a instance variable for performance,
