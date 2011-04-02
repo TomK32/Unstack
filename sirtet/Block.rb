@@ -48,7 +48,7 @@ class Block
     end
   end
   def size
-    @size ||= NSSize.new(shape.collect{|r| r.size}.max, shape.size)
+    @size ||= NSSize.new(shape.empty? ? 0 : shape.collect{|r| r.size}.max, shape.size)
   end
 
   def fits?(other_block, other_x, other_y)

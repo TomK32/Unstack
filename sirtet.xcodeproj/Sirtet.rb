@@ -16,6 +16,7 @@ class Sirtet
   attr_accessor :tower
   attr_accessor :timer
   attr_accessor :tower_timer
+  attr_accessor :game_ended_view
   
   def awakeFromNib
     start_timer
@@ -25,16 +26,22 @@ class Sirtet
   def start_timer
     self.timer ||= NSTimer.scheduledTimerWithTimeInterval( 1/20.0,
           target:self, selector:"tick:", userInfo:nil, repeats:true)
-    self.tower_timer ||= NSTimer.scheduledTimerWithTimeInterval( 10.0,
+    self.tower_timer ||= NSTimer.scheduledTimerWithTimeInterval( 2.0,
           target:self, selector:"tick_tower:", userInfo:nil, repeats:true)
   end
+
   def stop_timer
     self.timer.invalidate
+    self.timer = nil
     self.tower_timer.invalidate
+    self.tower_timer = nil
   end
   
   def start_game(sender)
     start_timer
+    self.game_ended_view.setHidden true
+    self.game_view.tower_view.setHidden false
+
     self.height = (game_view.tower_view.frame.size.height / 20).floor
     self.width = (game_view.tower_view.frame.size.width / 20).floor
     self.grade = rand/4 + 0.7
@@ -48,6 +55,12 @@ class Sirtet
 
   def end_game(awesome = false)
     self.stop_timer
+    player.awesome = awesome
+    self.next_block= Smiley.new
+    self.game_ended_view.setHidden false
+    self.game_ended_view.setNeedsDisplay true
+    self.game_view.tower_view.setHidden true
+    self.game_view.next_block_view.setNeedsDisplay true
   end
 
   def tick(seconds)
@@ -79,12 +92,14 @@ class Sirtet
     tower.fits?(next_block, x, y)
   end
 
+  # player gets 100 extra if he cleans the tower
   def score!(x,y)
     if tower.remove(next_block, x, y)
 
-      player.add_score(next_block.time_remaining)
+      player.add_score(next_block.time_remaining * next_block.blocks_sum / 2)
       self.next_block = Block.new
       if tower.empty?
+        player.add_score(100)
         self.end_game(true)
       end
       return true
@@ -101,6 +116,6 @@ class Sirtet
   end
 
   def stats
-    "%.1f%% of %i lines" % [tower.fill_grade*100, tower.size.height]
+    "%i blocks, %i lines" % [tower.blocks_sum, tower.size.height]
   end
 end

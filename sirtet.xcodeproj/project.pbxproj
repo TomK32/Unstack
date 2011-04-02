@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA5B67F134724680054197B /* GameEndedView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EA5B67E134724680054197B /* GameEndedView.rb */; };
+		0EA5B68213472B2F0054197B /* Smiley.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EA5B68113472B2F0054197B /* Smiley.rb */; };
 		0EE09A651345BC110008386E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE09A641345BC110008386E /* Cocoa.framework */; };
 		0EE09A671345BC110008386E /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE09A661345BC110008386E /* MacRuby.framework */; };
 		0EE09A6E1345BC110008386E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09A6C1345BC110008386E /* InfoPlist.strings */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EA5B67E134724680054197B /* GameEndedView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameEndedView.rb; sourceTree = "<group>"; };
+		0EA5B68113472B2F0054197B /* Smiley.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Smiley.rb; sourceTree = "<group>"; };
 		0EE09A601345BC110008386E /* sirtet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sirtet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE09A641345BC110008386E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0EE09A661345BC110008386E /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = System/Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
@@ -112,12 +116,14 @@
 				0EE09AAE1345E75C0008386E /* GameHelper.rb */,
 				0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */,
 				0EE09AB81345E77F0008386E /* GameView.rb */,
+				0EA5B67E134724680054197B /* GameEndedView.rb */,
 				0EE09AAF1345E75C0008386E /* NextBlockView.rb */,
 				0EE09AA01345C8400008386E /* ScoresView.rb */,
 				0EE09AB11345E75D0008386E /* TowerView.rb */,
 				0EE09A831345BCD90008386E /* Block.rb */,
-				0EE09ACA1345F3E10008386E /* Player.rb */,
 				0EE09AB61345E76D0008386E /* Tower.rb */,
+				0EA5B68113472B2F0054197B /* Smiley.rb */,
+				0EE09ACA1345F3E10008386E /* Player.rb */,
 				0EE09A721345BC110008386E /* Resources */,
 				0EE09A761345BC110008386E /* Other Sources */,
 				0EE09A6A1345BC110008386E /* Supporting Files */,
@@ -236,6 +242,8 @@
 				0EE09AE1134625E50008386E /* README.markdown in Resources */,
 				0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */,
 				0EE962E913463F0A003ADC6B /* Sirtet.icns in Resources */,
+				0EA5B67F134724680054197B /* GameEndedView.rb in Resources */,
+				0EA5B68213472B2F0054197B /* Smiley.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
