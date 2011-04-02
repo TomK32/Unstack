@@ -8,7 +8,8 @@
 
 
 class Tower < Block
-  
+  attr_accessor :grade
+
   def initialize(shape = [])
     self.shape = shape
   end
@@ -17,7 +18,9 @@ class Tower < Block
   # param :grade is the fill grade of the field
   def self.random(grade, height, width)
     raise "grade must be less than 1" if grade > 1
-    self.new height.times.collect{|row| width.times.collect{|col| rand() + grade >= 1 ? self.color : nil } }
+    tower = self.new height.times.collect{|row| width.times.collect{|col| rand() + grade >= 1 ? self.color : nil } }
+    tower.grade = grade
+    return tower
   end
 
   # retuns a random from these colors: red, blue, green
@@ -25,7 +28,8 @@ class Tower < Block
     [NSColor.redColor, NSColor.blueColor, NSColor.greenColor].sample
   end
 
-  def shuffle_and_remove
+  # acts recursive if the stack is very sparse
+  def shuffle_and_remove(run=1)
     return false if self.shape.size < 3
     blocks = self.shape[-1].compact.size
     hit = false
@@ -47,5 +51,9 @@ class Tower < Block
     self.shape.pop
     # and now suffle the remainder
     self.shape.collect!{|r| r.sort{rand}}.sort!{rand}
+    # and again if it's really sparse
+    @fill_grade = nil
+    @size = nil
+    self.shuffle_and_remove(run+1) and return true if (self.fill_grade*run < (self.grade**2))
   end
 end

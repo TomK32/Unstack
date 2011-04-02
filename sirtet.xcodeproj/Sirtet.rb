@@ -49,7 +49,6 @@ class Sirtet
 
   def next_block=(block)
     game_view.next_block_view.block = block
-    game_view.next_block_view.setNeedsDisplay true
   end
 
   def next_block_fits?(x,y)
@@ -57,21 +56,23 @@ class Sirtet
   end
 
   def score!(x,y)
-    size_before = tower.size
     if tower.remove(next_block, x, y)
 
-      player.add_score(next_block.time_remaining ** (1 + size_before.width - tower.size.width + size_before.height - tower.size.height))
+      player.add_score(next_block.time_remaining)
       self.next_block = Block.new
-      game_view.scores_view.setNeedsDisplay true
       return true
     end
     return false
   end
 
   def shuffle_and_remove(sender)
-    if self.tower.shuffle_and_remove
-      self.player.add_score(-2)
-      self.game_view.tower_view.setNeedsDisplay true
+    if tower.shuffle_and_remove
+      player.add_score(-2)
     end
+    self.next_block = Block.new
+  end
+
+  def stats
+    "%.1f%% of %i lines" % [tower.fill_grade*100, tower.size.height]
   end
 end

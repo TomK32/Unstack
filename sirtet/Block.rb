@@ -61,6 +61,8 @@ class Block
   end
 
   def remove(other_block, other_x, other_y)
+    @fill_grade = nil
+    @size = nil
     new_shape = shape.clone
     other_block.shape.each_with_index do |row, y|
       row.each_with_index do |field, x|
@@ -78,5 +80,13 @@ class Block
   def rotate!(angle)
     self.shape = self.shape.transpose if angle % 90
     self.shape = self.shape.collect{|row| row.reverse} if angle % 180
+  end
+
+  # uses a instance variable for performance,
+  # don't forget to set @fill_grade nil when changing the stack
+  def fill_grade
+    return @fill_grade if @fill_grade
+    blocks =  self.shape.collect{|r| r.compact.size }.inject{|r,sum| sum+=r }
+    return @fill_grade = blocks.to_f / (self.size.height * self.size.width)
   end
 end

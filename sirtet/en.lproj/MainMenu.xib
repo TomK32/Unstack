@@ -208,7 +208,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="166521667">
+								<object class="NSMenuItem" id="299047865">
 									<reference key="NSMenu" ref="720053764"/>
 									<string key="NSTitle">Shuffle and Compact</string>
 									<string key="NSKeyEquiv">s</string>
@@ -287,25 +287,25 @@
 							<int key="NSvFlags">270</int>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSTextField" id="519277126">
+								<object class="NSTextField" id="48826335">
 									<reference key="NSNextResponder" ref="712270160"/>
 									<int key="NSvFlags">268</int>
-									<string key="NSFrame">{{171, 36}, {75, 22}}</string>
+									<string key="NSFrame">{{7, 8}, {135, 14}}</string>
 									<reference key="NSSuperview" ref="712270160"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="315558709"/>
 									<bool key="NSEnabled">YES</bool>
-									<object class="NSTextFieldCell" key="NSCell" id="978153814">
+									<object class="NSTextFieldCell" key="NSCell" id="517918929">
 										<int key="NSCellFlags">68288064</int>
-										<int key="NSCellFlags2">71304192</int>
-										<string key="NSContents"/>
-										<object class="NSFont" key="NSSupport" id="691533503">
+										<int key="NSCellFlags2">272630784</int>
+										<string key="NSContents">Stats</string>
+										<object class="NSFont" key="NSSupport">
 											<string key="NSName">LucidaGrande</string>
-											<double key="NSSize">18</double>
+											<double key="NSSize">11</double>
 											<int key="NSfFlags">16</int>
 										</object>
-										<string type="base64-UTF8" key="NSPlaceholderString">IA</string>
-										<reference key="NSControlView" ref="519277126"/>
+										<string key="NSPlaceholderString"/>
+										<reference key="NSControlView" ref="48826335"/>
 										<object class="NSColor" key="NSBackgroundColor" id="140558680">
 											<int key="NSColorSpace">6</int>
 											<string key="NSCatalogName">System</string>
@@ -324,6 +324,29 @@
 												<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 											</object>
 										</object>
+									</object>
+								</object>
+								<object class="NSTextField" id="519277126">
+									<reference key="NSNextResponder" ref="712270160"/>
+									<int key="NSvFlags">268</int>
+									<string key="NSFrame">{{171, 36}, {75, 22}}</string>
+									<reference key="NSSuperview" ref="712270160"/>
+									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView" ref="48826335"/>
+									<bool key="NSEnabled">YES</bool>
+									<object class="NSTextFieldCell" key="NSCell" id="978153814">
+										<int key="NSCellFlags">68288064</int>
+										<int key="NSCellFlags2">71304192</int>
+										<string key="NSContents"/>
+										<object class="NSFont" key="NSSupport" id="691533503">
+											<string key="NSName">LucidaGrande</string>
+											<double key="NSSize">18</double>
+											<int key="NSfFlags">16</int>
+										</object>
+										<string type="base64-UTF8" key="NSPlaceholderString">IA</string>
+										<reference key="NSControlView" ref="519277126"/>
+										<reference key="NSBackgroundColor" ref="140558680"/>
+										<reference key="NSTextColor" ref="480753584"/>
 									</object>
 								</object>
 								<object class="NSTextField" id="1034102166">
@@ -713,9 +736,17 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">shuffle_and_remove:</string>
 						<reference key="source" ref="771025895"/>
-						<reference key="destination" ref="166521667"/>
+						<reference key="destination" ref="299047865"/>
 					</object>
 					<int key="connectionID">608</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">stats</string>
+						<reference key="source" ref="712270160"/>
+						<reference key="destination" ref="517918929"/>
+					</object>
+					<int key="connectionID">611</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -789,7 +820,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="705341025"/>
-							<reference ref="166521667"/>
+							<reference ref="299047865"/>
 						</object>
 						<reference key="parent" ref="379814623"/>
 					</object>
@@ -942,8 +973,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="633589328"/>
-							<reference ref="1034102166"/>
 							<reference ref="519277126"/>
+							<reference ref="48826335"/>
+							<reference ref="1034102166"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
@@ -1069,8 +1101,23 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">607</int>
-						<reference key="object" ref="166521667"/>
+						<reference key="object" ref="299047865"/>
 						<reference key="parent" ref="720053764"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">609</int>
+						<reference key="object" ref="48826335"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="517918929"/>
+						</object>
+						<reference key="parent" ref="712270160"/>
+						<string key="objectName">Stats</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">610</int>
+						<reference key="object" ref="517918929"/>
+						<reference key="parent" ref="48826335"/>
 					</object>
 				</object>
 			</object>
@@ -1157,6 +1204,8 @@
 					<string>604.IBPluginDependency</string>
 					<string>607.IBAttributePlaceholdersKey</string>
 					<string>607.IBPluginDependency</string>
+					<string>609.IBPluginDependency</string>
+					<string>610.IBPluginDependency</string>
 					<string>81.IBEditorWindowLastContentRect</string>
 					<string>81.IBPluginDependency</string>
 					<string>81.ImportedFromIB2</string>
@@ -1256,10 +1305,12 @@
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
-							<reference key="object" ref="166521667"/>
+							<reference key="object" ref="299047865"/>
 							<string key="toolTip">Shuffles the field and removes a line.</string>
 						</object>
 					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{452, 109}, {196, 203}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1283,7 +1334,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">608</int>
+			<int key="maxID">611</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1463,9 +1514,11 @@
 							<string>last_score</string>
 							<string>player</string>
 							<string>score</string>
+							<string>stats</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1480,6 +1533,7 @@
 							<string>last_score</string>
 							<string>player</string>
 							<string>score</string>
+							<string>stats</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1497,6 +1551,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">score</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">stats</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
