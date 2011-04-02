@@ -15,15 +15,22 @@ class Sirtet
   attr_accessor :grade
   attr_accessor :tower
   attr_accessor :timer
+  attr_accessor :tower_timer
   
   def awakeFromNib
-    self.timer = NSTimer.scheduledTimerWithTimeInterval( 1/20.0,
-            target:self, selector:"tick:",
-            userInfo:nil, repeats:true)
+    start_timer
     start_game(self)
+  end
+
+  def start_timer
+    self.timer ||= NSTimer.scheduledTimerWithTimeInterval( 1/20.0,
+          target:self, selector:"tick:", userInfo:nil, repeats:true)
+    self.tower_timer ||= NSTimer.scheduledTimerWithTimeInterval( 10.0,
+          target:self, selector:"tick_tower:", userInfo:nil, repeats:true)
   end
   
   def start_game(sender)
+    start_timer
     self.height = (game_view.tower_view.frame.size.height / 20).floor
     self.width = (game_view.tower_view.frame.size.width / 20).floor
     self.grade = rand/4 + 0.7
@@ -42,6 +49,11 @@ class Sirtet
     end
     game_view.setNeedsDisplay true
     game_view.scores_view.setNeedsDisplay true
+  end
+
+  # every 10 seconds we remove the bottom line of the tower without penalty for the player
+  def tick_tower(seconds)
+    self.tower.remove_row(0)
   end
 
   def next_block

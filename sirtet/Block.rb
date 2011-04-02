@@ -77,6 +77,12 @@ class Block
     return true
   end
 
+  def remove_row(row)
+    @fill_grade = nil
+    @size = nil
+    self.shape.delete_at(row)
+  end
+
   def rotate!(angle)
     self.shape = self.shape.transpose if angle % 180
     self.shape = self.shape.collect{|row| row.reverse} if angle % 90
