@@ -13,6 +13,7 @@ class TowerView < NSView
   attr_accessor :game_view
   attr_accessor :block_position
   attr_accessor :last_rotation
+  attr_accessor :last_drag_point
 
   def block_size
     game_view.block_size
@@ -44,9 +45,13 @@ class TowerView < NSView
 
   def mouseDragged(event)
     point = convertPoint event.locationInWindow, fromView:nil
+    if last_drag_point && (last_drag_point.x - point.x + last_drag_point.y - point.y).abs < block_size/2
+      return
+    end
+    self.last_drag_point ||= self.block_position
     rotation =
-      ((point.y - self.block_position.y) > block_size/2 ? 180 : 0) +
-      ((point.x - self.block_position.x) > block_size/2 ?  90 : 0)
+      ((point.y - self.last_drag_point.y) > block_size/2 ? 180 : 0) +
+      ((point.x - self.last_drag_point.x) > block_size/2 ?  90 : 0)
     if self.last_rotation != rotation && self.game.next_block.rotate!(rotation)
       self.last_rotation = rotation
     end
