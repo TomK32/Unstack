@@ -51,3 +51,5 @@ at his local hackerspace. Any donations are heartly welcome support my slacking
 Copyright
 ---------
 (C) 2011 by Thomas R. Koll, <info@ananasblau.com>
+
+![Game Over](https://github.com/TomK32/Sirtet/raw/master/screenshot2.png)
