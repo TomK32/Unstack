@@ -28,6 +28,10 @@ class Sirtet
     self.tower_timer ||= NSTimer.scheduledTimerWithTimeInterval( 10.0,
           target:self, selector:"tick_tower:", userInfo:nil, repeats:true)
   end
+  def stop_timer
+    self.timer.invalidate
+    self.tower_timer.invalidate
+  end
   
   def start_game(sender)
     start_timer
@@ -39,10 +43,17 @@ class Sirtet
     self.player.score = 0
     self.tower = Tower.random(self.grade, self.height, self.width)
     self.next_block = Block.new
-    self.game_view.setNeedsDisplay true
+    game_view.setNeedsDisplay true
+  end
+
+  def end_game(awesome = false)
+    self.stop_timer
   end
 
   def tick(seconds)
+    if tower.blocks_sum == 0
+      return end_game
+    end
     unless self.next_block.tick(1/20.0)
       self.player.add_score -(self.next_block.initial_time/2)
       self.next_block = Block.new
@@ -73,6 +84,9 @@ class Sirtet
 
       player.add_score(next_block.time_remaining)
       self.next_block = Block.new
+      if tower.empty?
+        self.end_game(true)
+      end
       return true
     end
     return false

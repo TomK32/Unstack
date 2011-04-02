@@ -92,7 +92,15 @@ class Block
   # don't forget to set @fill_grade nil when changing the stack
   def fill_grade
     return @fill_grade if @fill_grade
-    blocks =  self.shape.collect{|r| r.compact.size }.inject{|r,sum| sum+=r }
-    return @fill_grade = blocks.to_f / (self.size.height * self.size.width)
+    return @fill_grade = self.blocks_sum.to_f / (self.size.height * self.size.width)
+  end
+
+  # returns number of blocks in the shape
+  def blocks_sum
+    self.shape.collect{|r| r.compact.size }.inject{|r,sum| sum+=r } || 0
+  end
+
+  def empty?
+    blocks_sum == 0
   end
 end
