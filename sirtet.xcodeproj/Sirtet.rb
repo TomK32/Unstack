@@ -67,4 +67,11 @@ class Sirtet
     end
     return false
   end
+
+  def shuffle_and_remove(sender)
+    if self.tower.shuffle_and_remove
+      self.player.add_score(-2)
+      self.game_view.tower_view.setNeedsDisplay true
+    end
+  end
 end
