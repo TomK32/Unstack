@@ -1,15 +1,64 @@
-body {
-  background-image: url(/images/background.png);
-  padding: 0; }
 
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: Helvetica, Sans-Serif;
+}
+
+#background {
+  float: right;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
 #container {
+  border: 2px white solid;
   width: 640px;
-  margin: 0 auto;
-  background-color: black; }
+  margin: 20px auto 0 auto;
+  padding: 20px;
+  height: 400px;
+  position: relative;
+}
 
 a {
-  color: green; }
+  color: #00F;
+  text-decoration: none;
+  text-shadow: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-header .title {
-  font-size: 20px;
-  text-decoration: none; }
+p {
+  text-shadow: 1px 1px #070;
+}
+header, nav, section, footer {
+  display: block;
+}
+
+header, .title {
+  text-decoration: none;
+  text-shadow: 2px 2px #A00;
+}
+
+.title {
+  line-height: 20px;
+  font-size: 32px;
+  color: #FF0;
+}
+nav {
+  text-align: right;
+}
+nav ul li {
+  display: inline;
+  margin: 0 5px;
+}
+
+footer {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 240px;
+}
