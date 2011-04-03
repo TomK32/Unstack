@@ -1,0 +1,20 @@
+body {
+  background-image: url(/images/background.png);
+  padding: 0;
+}
+
+#container {
+  width: 640px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+a {
+  color: green;
+}
+header {
+  .title {
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
