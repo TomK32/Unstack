@@ -36,6 +36,7 @@ p {
 }
 header, nav, section, footer {
   display: block;
+  width: 100%;
 }
 
 header, .title {
@@ -48,17 +49,11 @@ header, .title {
   font-size: 32px;
   color: #FF0;
 }
-nav {
-  text-align: right;
-}
-nav ul li {
-  display: inline;
-  margin: 0 5px;
-}
 
 footer {
+  width: 420px;
+  text-align: right;
   font-size: 12px;
   position: absolute;
-  bottom: 0;
-  right: 240px;
+  bottom: 0px;
 }
