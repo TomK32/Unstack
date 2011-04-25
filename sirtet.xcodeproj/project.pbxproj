@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E83D270136560A400209F44 /* Sirtet.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0E83D26F136560A400209F44 /* Sirtet.icns */; };
 		0EA5B67F134724680054197B /* GameEndedView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EA5B67E134724680054197B /* GameEndedView.rb */; };
 		0EA5B68213472B2F0054197B /* Smiley.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EA5B68113472B2F0054197B /* Smiley.rb */; };
 		0EE09A651345BC110008386E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE09A641345BC110008386E /* Cocoa.framework */; };
@@ -27,7 +28,6 @@
 		0EE09ACB1345F3E10008386E /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09ACA1345F3E10008386E /* Player.rb */; };
 		0EE09AE1134625E50008386E /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AE0134625E40008386E /* README.markdown */; };
 		0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */; };
-		0EE962E913463F0A003ADC6B /* Sirtet.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0EE962E813463F0A003ADC6B /* Sirtet.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E83D26F136560A400209F44 /* Sirtet.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Sirtet.icns; sourceTree = "<group>"; };
 		0EA5B67E134724680054197B /* GameEndedView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GameEndedView.rb; sourceTree = "<group>"; };
 		0EA5B68113472B2F0054197B /* Smiley.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Smiley.rb; sourceTree = "<group>"; };
 		0EE09A601345BC110008386E /* sirtet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sirtet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +65,6 @@
 		0EE09ACA1345F3E10008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
 		0EE09AE0134625E40008386E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindow.rb; sourceTree = "<group>"; };
-		0EE962E813463F0A003ADC6B /* Sirtet.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Sirtet.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		0EE09A551345BC110008386E = {
 			isa = PBXGroup;
 			children = (
-				0EE962E813463F0A003ADC6B /* Sirtet.icns */,
+				0E83D26F136560A400209F44 /* Sirtet.icns */,
 				0EE09AE0134625E40008386E /* README.markdown */,
 				0EE09A691345BC110008386E /* sirtet */,
 				0EE09A631345BC110008386E /* Frameworks */,
@@ -201,7 +201,7 @@
 		0EE09A571345BC110008386E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = Ananasblau.com;
+				ORGANIZATIONNAME = ananasblau.com;
 			};
 			buildConfigurationList = 0EE09A5A1345BC110008386E /* Build configuration list for PBXProject "sirtet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -241,9 +241,9 @@
 				0EE09ACB1345F3E10008386E /* Player.rb in Resources */,
 				0EE09AE1134625E50008386E /* README.markdown in Resources */,
 				0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */,
-				0EE962E913463F0A003ADC6B /* Sirtet.icns in Resources */,
 				0EA5B67F134724680054197B /* GameEndedView.rb in Resources */,
 				0EA5B68213472B2F0054197B /* Smiley.rb in Resources */,
+				0E83D270136560A400209F44 /* Sirtet.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
