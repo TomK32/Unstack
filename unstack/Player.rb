@@ -1,6 +1,6 @@
 #
 #  Player.rb
-#  sirtet
+#  unstack
 #
 #  Created by Thomas R. Koll on 01.04.11.
 #  Copyright 2011 Ananasblau.com. All rights reserved.

@@ -1,12 +1,12 @@
 #
-#  Sirtet.rb
-#  sirtet
+#  Unstack.rb
+#  unstack
 #
 #  Created by Thomas R. Koll on 01.04.11.
 #  Copyright 2011 Ananasblau.com. All rights reserved.
 #
 
-class Sirtet
+class Unstack
   attr_accessor :game_view
   attr_accessor :blocks
   attr_accessor :player

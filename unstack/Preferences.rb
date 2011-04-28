@@ -1,6 +1,6 @@
 #
 #  Preferences.rb
-#  sirtet
+#  unstack
 #
 #  Created by Thomas R. Koll on 28.04.11.
 #  Copyright 2011 ananasblau.com. All rights reserved.

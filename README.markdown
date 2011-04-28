@@ -1,13 +1,13 @@
-Sirtet
+Unstack
 ======
 
-Sirtet is a game inspired by the classic Tetris. If you are among those whose'
-tetris lines got stacked up sky high it's your time to rewind the game.
+Unstack is a game inspired by a classic block stacking game. If you are among those
+whose' lines got stacked up sky high it's your time to rewind the game.
 You start with a field full with block and your goal to remove the
 blocks from the field matching your next piece to remove. Confused? Great :)
 
 
-![Game in Action](https://github.com/TomK32/Sirtet/raw/master/screenshot.png)
+![Game in Action](https://github.com/TomK32/unstack/raw/master/screenshot.png)
 
 Requirements & Website
 ----------------------
@@ -17,8 +17,8 @@ Anyone who wants to port it to Linux or Windows is welcome to do so.
 
 Source code and binry downloads can be found at github:
 
-* [source code](http://github.com/TomK32/sirtet)
-* [Download](http://github.com/TomK32/sirtet/downloads)
+* [source code](http://github.com/TomK32/unstack)
+* [Download](http://github.com/TomK32/unstack/downloads)
 
 Follow my github account if you don't want to miss my next game:
 
@@ -52,4 +52,4 @@ Copyright
 ---------
 (C) 2011 by Thomas R. Koll, <info@ananasblau.com>
 
-![Game Over](https://github.com/TomK32/Sirtet/raw/master/screenshot2.png)
+![Game Over](https://github.com/TomK32/unstack/raw/master/screenshot2.png)
