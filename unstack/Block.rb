@@ -17,9 +17,9 @@ class Block
     [[1,1,1], [nil,1,nil]], # T
     [[1,1,1], [1,nil,nil]], # L
     [[1,1,1], [nil,nil,1]], # inverse L
-    [[1,1,nil], [nil,1,1]], # z
-    [[nil,1,1], [1,1,nil]], # inverse z
-    [[1,1,1,1]], # long john
+    [[1,1], [nil,1]], # z
+    [[1,1], [1,nil]], # inverse z
+    [[1,1,1]], # long john
     [[1,1], [1,1]] # block
   ]
   def initialize(shape = nil, time = nil)
