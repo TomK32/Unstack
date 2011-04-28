@@ -15,11 +15,11 @@ class PreferencesWindow < NSWindow
   end
 
   def set_values
-		self.name.stringValue = NSUserDefaults.standardUserDefaults['player.name'].to_s
+		self.name.stringValue = Preferences.player_name
   end
 
   def performClose(sender)
-     NSUserDefaults.standardUserDefaults['player.name'] = self.name.stringValue
+    NSUserDefaults.standardUserDefaults['player.name'] = self.name.stringValue
     game.player.name = self.name.stringValue
     game.setNeedsDisplay true
     NSUserDefaults.standardUserDefaults.synchronize

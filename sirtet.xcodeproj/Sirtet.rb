@@ -46,7 +46,7 @@ class Sirtet
     self.width = (game_view.tower_view.frame.size.width / 20).floor
     self.grade = rand/4 + 0.7
     self.blocks = []
-    self.player = Player.new(NSUserDefaults.standardUserDefaults['player.name'] || "Thomas")
+    self.player = Player.new(Preferences.player_name)
     self.player.score = 0
     self.tower = Tower.random(self.grade, self.height, self.width)
     self.next_block = Block.new

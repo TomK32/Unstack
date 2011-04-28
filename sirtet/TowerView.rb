@@ -44,6 +44,7 @@ class TowerView < NSView
   end
 
   def mouseDragged(event)
+    return unless Preferences.rotate_with_mouse
     point = convertPoint event.locationInWindow, fromView:nil
     if last_drag_point && (last_drag_point.x - point.x + last_drag_point.y - point.y).abs < block_size/2
       return
