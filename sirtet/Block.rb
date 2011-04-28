@@ -83,9 +83,14 @@ class Block
     self.shape.delete_at(row)
   end
 
+
+# 180
+# [1 2, 3 4] => [4 3, 2 1]
+# 90
+# [1 2, 3 4] => [3 1, 4 2]
   def rotate!(angle)
-    self.shape = self.shape.transpose if angle % 180
-    self.shape = self.shape.collect{|row| row.reverse} if angle % 90
+    self.shape = self.shape.transpose.collect{|row| row.reverse} if angle % 90 == 0
+    self.shape = self.shape.collect{|row| row.reverse}.reverse if angle % 180 == 0
   end
 
   # uses a instance variable for performance,

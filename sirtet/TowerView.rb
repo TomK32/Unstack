@@ -15,6 +15,17 @@ class TowerView < NSView
   attr_accessor :last_rotation
   attr_accessor :last_drag_point
 
+	def acceptsFirstResponder
+		return true
+	end
+
+  def awakeFromNib
+    tracking_area = NSTrackingArea.alloc.initWithRect self.bounds, 
+      options:(NSTrackingCursorUpdate | NSTrackingActiveInActiveApp | NSTrackingMouseMoved), 
+      owner:self, userInfo:nil
+    self.addTrackingArea tracking_area
+  end
+
   def block_size
     game_view.block_size
   end
@@ -24,6 +35,11 @@ class TowerView < NSView
       game.tower.drawRect(rect, block_size)
     end
     draw_block if self.block_fits? && self.block_position
+  end
+
+  def mouseMoved(event)
+    point = self.point_in_grid(convertPoint event.locationInWindow, fromView:nil)
+    self.block_position = point
   end
 
   def mouseDown(event)
@@ -57,6 +73,15 @@ class TowerView < NSView
       self.last_rotation = rotation
     end
   end
+
+  def keyDown(event)
+    key = event.characters[0].bytes.to_a[-1]
+    # keys are: space a d w s
+		if([32, 97, 100, 119, 115].include?(key))
+      rotation = [97, 115].include?(key) ? 270 : 180
+      self.game.next_block.rotate!(rotation)
+    end
+	end
 
   def draw_block
     with_context do

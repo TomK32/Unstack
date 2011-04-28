@@ -17,7 +17,7 @@ class Sirtet
   attr_accessor :timer
   attr_accessor :tower_timer
   attr_accessor :game_ended_view
-  
+
   def awakeFromNib
     start_timer
     start_game(self)
