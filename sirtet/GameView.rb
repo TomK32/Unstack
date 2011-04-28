@@ -23,11 +23,4 @@ class GameView < NSView
     NSRectFill(bounds)
   end
 
-  def toggleFullscreen(sender)
-    if self.isInFullScreenMode
-      self.exitFullScreenModeWithOptions nil
-    else
-      self.enterFullScreenMode self.window.screen, withOptions:nil
-    end
-  end
 end
