@@ -2,7 +2,7 @@
 #  Block.rb
 #  unstack
 #
-#  Created by Thomas R. Koll on nil1.nil4.11.
+#  Created by Thomas R. Koll on 01.04.2011
 #  Copyright 2nil11 Ananasblau.com. All rights reserved.
 #
 

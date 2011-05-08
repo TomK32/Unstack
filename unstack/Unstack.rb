@@ -16,7 +16,6 @@ class Unstack
   attr_accessor :tower
   attr_accessor :timer
   attr_accessor :tower_timer
-  attr_accessor :game_ended_view
 
   def awakeFromNib
     start_timer
@@ -39,8 +38,7 @@ class Unstack
   
   def start_game(sender)
     start_timer
-    self.game_ended_view.setHidden true
-    self.game_view.tower_view.setHidden false
+    self.game_view.start_game()
 
     self.height = (game_view.tower_view.frame.size.height / 20).floor
     self.width = (game_view.tower_view.frame.size.width / 20).floor
@@ -57,9 +55,8 @@ class Unstack
     self.stop_timer
     player.awesome = awesome
     self.next_block= Smiley.new
-    self.game_ended_view.setHidden false
-    self.game_ended_view.setNeedsDisplay true
-    self.game_view.tower_view.setHidden true
+    self.game_view.end_game()
+
     self.game_view.next_block_view.setNeedsDisplay true
   end
 
