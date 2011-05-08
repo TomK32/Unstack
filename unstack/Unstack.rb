@@ -8,6 +8,7 @@
 
 class Unstack
   attr_accessor :game_view
+  attr_accessor :fullscreen_view
   attr_accessor :blocks
   attr_accessor :player
   attr_accessor :width
@@ -16,9 +17,14 @@ class Unstack
   attr_accessor :tower
   attr_accessor :timer
   attr_accessor :tower_timer
-
+  attr_accessor :highscores_view
+  attr_accessor :tutorial_view
+  attr_accessor :current_view
+  attr_accessor :paused
+  attr_accessor :pause_menu_item
+  
   def awakeFromNib
-    start_timer
+    self.current_view = self.game_view
     start_game(self)
   end
 
@@ -30,24 +36,34 @@ class Unstack
   end
 
   def stop_timer
+    return if self.timer.nil?
     self.timer.invalidate
     self.timer = nil
+    return if self.tower_timer.nil?
     self.tower_timer.invalidate
     self.tower_timer = nil
   end
   
   def start_game(sender)
-    start_timer
-    self.game_view.start_game()
-
-    self.height = (game_view.tower_view.frame.size.height / 20).floor
-    self.width = (game_view.tower_view.frame.size.width / 20).floor
-    self.grade = rand/4 + 0.7
-    self.blocks = []
-    self.player = Player.new(Preferences.player_name)
-    self.player.score = 0
-    self.tower = Tower.random(self.grade, self.height, self.width)
-    self.next_block = Block.new
+    if self.current_view != self.game_view
+      fullscreen_view.replaceSubview(self.current_view, with:self.game_view)
+      self.current_view = self.game_view
+    end
+    if(!self.timer)
+      start_timer
+    end
+    if(!self.paused)
+      self.height = (game_view.tower_view.frame.size.height / 20).floor
+      self.width = (game_view.tower_view.frame.size.width / 20).floor
+      self.grade = rand/4 + 0.7
+      self.blocks = []
+      self.player = Player.new(Preferences.player_name)
+      self.player.score = 0
+      self.tower = Tower.random(self.grade, self.height, self.width)
+      self.next_block = Block.new
+    end
+    self.paused = false
+    game_view.start_game
     game_view.setNeedsDisplay true
   end
 
@@ -58,6 +74,28 @@ class Unstack
     self.game_view.end_game()
 
     self.game_view.next_block_view.setNeedsDisplay true
+  end
+
+  def show_highscores(sender)
+    stop_timer()
+    self.paused = true
+    fullscreen_view.replaceSubview(self.current_view, with:self.highscores_view)
+    self.highscores_view.setNeedsDisplay true
+    self.current_view = self.highscores_view
+  end
+
+  def toggle_timer(sender)
+    if(!self.paused)
+      self.paused = true
+      stop_timer()
+      fullscreen_view.replaceSubview(self.current_view, with:self.tutorial_view)
+      self.tutorial_view.setNeedsDisplay true
+      self.current_view = self.tutorial_view
+      self.pause_menu_item.setTitle "Unpause"
+    else
+      self.pause_menu_item.setTitle "Pause"
+      start_game(sender)
+    end
   end
 
   def tick(seconds)

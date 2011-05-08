@@ -10,7 +10,6 @@
 class FullscreenView < NSView
   attr_accessor :game_view
 
-
   def drawRect(rect)
     NSColor.darkGrayColor.set
     NSRectFill(bounds)
