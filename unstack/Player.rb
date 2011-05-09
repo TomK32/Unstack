@@ -7,15 +7,17 @@
 #
 
 class Player
-  attr_accessor :name
   attr_accessor :score
   attr_accessor :scores
   attr_accessor :awesome
   
-  def initialize(name)
-    self.name = name
+  def initialize()
     self.scores = []
     self.awesome = false
+  end
+
+  def name
+    Preferences.player_name
   end
 
   def add_score(points)

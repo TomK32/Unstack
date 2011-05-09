@@ -9,7 +9,7 @@
 
 class Preferences
   def self.player_name
-    NSUserDefaults.standardUserDefaults['player.name'] || 'Thomas'
+    NSUserDefaults.standardUserDefaults['player_name'] || 'Thomas'
   end
   
   def self.rotate_with_mouse

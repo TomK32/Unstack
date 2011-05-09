@@ -31,7 +31,6 @@
 		0EE09AB91345E77F0008386E /* FullscreenView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AB81345E77F0008386E /* FullscreenView.rb */; };
 		0EE09ACB1345F3E10008386E /* Player.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09ACA1345F3E10008386E /* Player.rb */; };
 		0EE09AE1134625E50008386E /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 0EE09AE0134625E40008386E /* README.markdown */; };
-		0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +86,6 @@
 		0EE09AB81345E77F0008386E /* FullscreenView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FullscreenView.rb; sourceTree = "<group>"; };
 		0EE09ACA1345F3E10008386E /* Player.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Player.rb; sourceTree = "<group>"; };
 		0EE09AE0134625E40008386E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindow.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 				0E68F4FB1369ED64006B2BD5 /* Unstack.rb */,
 				0E89CB5C1369703800EB250D /* Preferences.rb */,
 				0EE09AAE1345E75C0008386E /* GameHelper.rb */,
-				0EE962D9134633BE003ADC6B /* PreferencesWindow.rb */,
 				0EE09AB81345E77F0008386E /* FullscreenView.rb */,
 				0E56D8161368642A00929160 /* GameView.rb */,
 				0EA5B67E134724680054197B /* GameEndedView.rb */,
@@ -284,7 +281,6 @@
 				0EE09AB91345E77F0008386E /* FullscreenView.rb in Resources */,
 				0EE09ACB1345F3E10008386E /* Player.rb in Resources */,
 				0EE09AE1134625E50008386E /* README.markdown in Resources */,
-				0EE962DA134633BE003ADC6B /* PreferencesWindow.rb in Resources */,
 				0EA5B67F134724680054197B /* GameEndedView.rb in Resources */,
 				0EA5B68213472B2F0054197B /* Smiley.rb in Resources */,
 				0E83D270136560A400209F44 /* Unstack.icns in Resources */,

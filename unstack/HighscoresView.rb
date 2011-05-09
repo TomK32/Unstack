@@ -8,10 +8,11 @@
 
 
 class HighscoresView < NSView
-  attr_accessor :table
+  attr_accessor :highscores
 
   def drawRect(rect)
     NSColor.blackColor.set
     NSRectFill(bounds)
+    highscores.setString NSUserDefaults.standardUserDefaults['highscores'].collect{|r| r.join('\t')}.join('\n')
   end
 end
